@@ -1,0 +1,63 @@
+<!-- <div class="saloon">
+        <div class="otherRow">
+          <div class="saloonWrap">
+            <div class="row">
+              <h5>Search by saloon name</h5>
+            </div>
+            <div class="row">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="enter saloon name" aria-label=""
+                  aria-describedby="saloonName" [(ngModel)]="saloonName">
+                <div class="input-group-append">
+                  <button class="btn btn-success" type="button" (click)="searchSaloonName()">Search</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row addSaloon">
+                <a [routerLink]="['/home/addsaloon']">Add Saloon</a>
+                
+              </div>
+            </div> -->
+            <div class="container">
+              <div class="card">
+              <div class="card-header bg-info text-center text white"></div>
+                <h3>Search by saloon name</h3>
+                
+              <div class="card-body text-center">
+              <table class="table">
+                <tr>
+                  <td>Enter Name</td>
+                  <td><input  name="name" type="text" [(ngModel)]="saloonName" placeholder="enter saloon saloonName" 
+                    /></td>
+                    <td><input type="button" value="Search" (click)="searchSaloonName()"/></td>
+                    </tr>
+              </table>
+              <hr/>
+              <table class="table table-striped">
+              <thead class="thead-info">
+              <th>Saloon Id</th>
+              <th>Saloon Name</th>
+              <th>Saloon Phonenumber</th>
+              <!-- <th>Customer Id</th>
+              <th>Customer Name</th>
+              <th>Customer Email</th>
+              <th>Customer Mobilenumber</th> -->
+              </thead>
+              <tr *ngFor="let s of sal">
+                <td>{{s.id}}</td>
+                <td>{{s.name}}</td>
+                <td>{{s.phoneNumber}}</td>
+                <!-- <td>{{s.id}}</td>
+                <td>{{s.name}}</td>
+                <td>{{s.email}}</td>
+                <td>{{s.Mobilenumber}}</td>
+                    -->
+              </tr>
+              </table>
+              </div>
+              </div>
+            </div>
+            
+              
+            

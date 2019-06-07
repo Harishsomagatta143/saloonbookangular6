@@ -1,0 +1,388 @@
+<!-- <table border="1">
+    <tr>
+        <th>Saloon Id</th>
+        <th>Saloon Name</th>
+        <th>Saloon Phonenumber</th>
+        <th>Address Id</th>
+        <th>Address City</th>
+        <th>Address State</th>
+        <th>Address Postalcode</th>
+        <th>Customer Id</th>
+        <th>Customer Name</th>
+        <th>Address Email</th>
+        <th>Address Mobilenumber</th>
+    </tr>
+    <tr *ngFor="let sal of saloons">
+        <td>{{sal.id}}</td>
+        <td>{{sal.name}}</td>
+        <td>{{sal.phoneNumber}}</td>
+        <td>{{sal.address.id}}</td>
+        <td>{{sal.address.city}}</td>
+        <td>{{sal.address.state}}</td>
+        <td>{{sal.address.postalcode}}</td>
+        <td>{{sal.customer.id}}</td>
+        <td>{{sal.customer.name}}</td>
+        <td>{{sal.customer.email}}</td>
+        <td>{{sal.customer.mobileNumber}}</td>
+        
+
+    </tr>
+</table> -->
+<!-- <h2>Add Saloon</h2>
+<table>
+    <tr>
+        <td>Saloon Id</td>
+        <td><input type="text" [(ngModel)]="model.id"/></td>
+    </tr>
+    <tr>
+        <td>Saloon Name</td>
+        <td><input type="text" [(ngModel)]="model.name"/></td>
+    </tr>
+    <tr>
+        <td>Saloon Phonenumber</td>
+        <td><input type="text" [(ngModel)]="model.phoneNumber"/></td>
+    </tr>
+   
+    <tr>
+        <td>Address Id</td>
+        <td><input type="text" [(ngModel)]="model.addressid"/></td>
+    </tr>
+    <tr>
+        <td>Address City</td>
+        <td><input type="text" [(ngModel)]="model.addresscity"/></td>
+    </tr>
+    <tr>
+        <td>Address State</td>
+        <td><input type="text" [(ngModel)]="model.addressstate"/></td>
+    </tr>
+    <tr>
+        <td>Address Postalcode</td>
+        <td><input type="text" [(ngModel)]="model.addresspostalcode"/></td>
+    </tr>
+    <! <tr>
+        <td>Customer Id</td>
+        <td><input type="text" [(ngModel)]="model.customerid"/></td>
+    </tr>
+    <tr>
+        <td>Customer Name</td>
+        <td><input type="text" [(ngModel)]="model.customername"/></td>
+    </tr>
+    <tr>
+        <td>Customer Email</td>
+        <td><input type="text" [(ngModel)]="model.customeremail"/></td>
+    </tr>
+    <tr>
+        <td>Customer Mobilenumber</td> 
+        <td><input type="text" [(ngModel)]="model.customermobileNumber"/></td>
+        </tr>-->
+         <!-- <tr>
+             <input type="button" class="btn btn-primary" value="next" (click)="addSaloon()"> -->
+        <!-- <input type="button" value="Add Saloon" (click)="addSaloon()"/> -->
+    <!-- </tr>
+</table> --> 
+
+<!-- <div class="Saloon" *ngIf="isSaloonDetails == false">
+        <form>
+           
+          <div class="form-group row">
+            <label for="Id" class="col-sm-2 col-form-label">Saloon Id</label>
+            <div class="col-sm-6">
+              <input type="text" [(ngModel)]="saloon.id" class="form-control" name="id" placeholder="Id" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="Name" class="col-sm-2 col-form-label">Saloon Name</label>
+            <div class="col-sm-6">
+              <input type="name" [(ngModel)]="saloon.name" class="form-control" name="saloonName" placeholder="Name" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="PhoneNumber" class="col-sm-2 col-form-label">Saloon PhoneNumber</label>
+            <div class="col-sm-6">
+              <input type="phoneNumber" [(ngModel)]="saloon.phoneNumber" class="form-control" name="PhoneNumber"
+                placeholder="Phone Number" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="Id" class="col-sm-2 col-form-label">Address Id</label>
+            <div class="col-sm-6">
+              <input type="text" [(ngModel)]="saloon.addressid" class="form-control" name="Id"
+                placeholder="Id" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="City" class="col-sm-2 col-form-label">Address City</label>
+            <div class="col-sm-6">
+              <input type="text" [(ngModel)]="saloon.addresscity" class="form-control" name="City"
+                placeholder="City" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="State" class="col-sm-2 col-form-label">Address State</label>
+            <div class="col-sm-6">
+              <input type="text" [(ngModel)]="saloon.addressstate" class="form-control" name="State"
+                placeholder="State" required>
+            </div>
+          </div>
+          
+          <div class="form-group row">
+            <label for="Postalcode" class="col-sm-2 col-form-label">Address Postalcode</label>
+            <div class="col-sm-6">
+              <input type="text" [(ngModel)]="vendor.addresspostalcode" class="form-control" name="Postalcode"
+                placeholder="Postalcode" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-4 offset-sm-8">
+              <button type="button" class="btn btn-primary" (click)="markSaloonDetails()">Next</button>
+            </div>
+          </div>
+        </form>
+      </div>
+  
+      <div class="saloon" *ngIf="isSaloonDetails == true">
+        <form>
+          <div class="form-group row">
+            <div class="form-group col-sm-4">
+              <label for="CustomerId" class="col-form-label">Customer Id</label>
+              <input type="text" class="form-control" [(ngModel)]="customer.id" name="customerid" placeholder="Customer Id" required>
+            </div>
+        </div>
+            <div class="form-group col-sm-4">
+              <label for="CustomerName" class="col-form-label">Customer Name</label>
+              <input type="text" class="form-control" [(ngModel)]="customer.name" name="customername" placeholder="Name" required>
+            </div>
+        
+        <div class="form-group col-sm-4">
+                <label for="CustomerEmail" class="col-form-label">Customer Email</label>
+                <input type="text" class="form-control" [(ngModel)]="customer.email" name="customername" placeholder="Email" required>
+              </div>
+          
+          <div class="form-group col-sm-4">
+                <label for="CustomermobileNumber" class="col-form-label">Customer mobileNumber</label>
+                <input type="number" class="form-control" [(ngModel)]="customer.mobileNumber" name="customermobilenumber" placeholder="mobileNumber" required>
+              </div>
+          
+            <div class="col-sm-2 submitVendor">
+              <button type="button" class="btn btn-primary" (click)="addCustomer()">Add Customer</button>
+            </div>
+            <div class="submitSaloon">
+              <button type="button" class="btn btn-success" (click)="submitSaloon()">Submit</button>
+            </div>
+          
+        </form> -->
+        <!-- <table border="1">
+    <tr>
+        <th>Saloon Id</th>
+        <th>Saloon Name</th>
+        <th>Saloon Phonenumber</th>
+        <th>Address Id</th>
+        <th>Address City</th>
+        <th>Address State</th>
+        <th>Address Postalcode</th>
+        <th>Customer Id</th>
+        <th>Customer Name</th>
+        <th>Address Email</th>
+        <th>Address Mobilenumber</th>
+    </tr>
+    <tr *ngFor="let sal of saloons">
+        <td>{{sal.id}}</td>
+        <td>{{sal.name}}</td>
+        <td>{{sal.phoneNumber}}</td>
+        <td>{{sal.address.id}}</td>
+        <td>{{sal.address.city}}</td>
+        <td>{{sal.address.state}}</td>
+        <td>{{sal.address.postalcode}}</td>
+        <td>{{sal.customer.id}}</td>
+        <td>{{sal.customer.name}}</td>
+        <td>{{sal.customer.email}}</td>
+        <td>{{sal.customer.mobileNumber}}</td>
+        
+
+    </tr>
+</table> -->
+<!-- <h2>Add Saloon</h2>
+<table>
+    <tr>
+        <td>Saloon Id</td>
+        <td><input type="text" [(ngModel)]="model.id"/></td>
+    </tr>
+    <tr>
+        <td>Saloon Name</td>
+        <td><input type="text" [(ngModel)]="model.name"/></td>
+    </tr>
+    <tr>
+        <td>Saloon Phonenumber</td>
+        <td><input type="text" [(ngModel)]="model.phoneNumber"/></td>
+    </tr>
+   
+    <tr>
+        <td>Address Id</td>
+        <td><input type="text" [(ngModel)]="model.addressid"/></td>
+    </tr>
+    <tr>
+        <td>Address City</td>
+        <td><input type="text" [(ngModel)]="model.addresscity"/></td>
+    </tr>
+    <tr>
+        <td>Address State</td>
+        <td><input type="text" [(ngModel)]="model.addressstate"/></td>
+    </tr>
+    <tr>
+        <td>Address Postalcode</td>
+        <td><input type="text" [(ngModel)]="model.addresspostalcode"/></td>
+    </tr>
+    <! <tr>
+        <td>Customer Id</td>
+        <td><input type="text" [(ngModel)]="model.customerid"/></td>
+    </tr>
+    <tr>
+        <td>Customer Name</td>
+        <td><input type="text" [(ngModel)]="model.customername"/></td>
+    </tr>
+    <tr>
+        <td>Customer Email</td>
+        <td><input type="text" [(ngModel)]="model.customeremail"/></td>
+    </tr>
+    <tr>
+        <td>Customer Mobilenumber</td> 
+        <td><input type="text" [(ngModel)]="model.customermobileNumber"/></td>
+        </tr>-->
+         <!-- <tr>
+             <input type="button" class="btn btn-primary" value="next" (click)="addSaloon()"> -->
+        <!-- <input type="button" value="Add Saloon" (click)="addSaloon()"/> -->
+    <!-- </tr>
+</table> --> 
+
+<div class="Saloon" *ngIf="isSaloonDetails == false">
+        <form>
+           
+          <div class="form-group row">
+            <label for="Id" class="col-sm-2 col-form-label">Saloon Id</label>
+            <div class="col-sm-6">
+              <input type="text" [(ngModel)]="saloon.id" class="form-control" name="saloonId" placeholder="Id" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="Name" class="col-sm-2 col-form-label">Saloon Name</label>
+            <div class="col-sm-6">
+              <input type="name" [(ngModel)]="saloon.name" class="form-control" name="saloonName" placeholder="Name" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="PhoneNumber" class="col-sm-2 col-form-label">Saloon PhoneNumber</label>
+            <div class="col-sm-6">
+              <input type="text" [(ngModel)]="saloon.phoneNumber" class="form-control" name="PhoneNumber"
+                placeholder="Phone Number" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="Id" class="col-sm-2 col-form-label">Address Id</label>
+            <div class="col-sm-6">
+              <input type="text" [(ngModel)]="saloon.addressid" class="form-control" name="Id"
+                placeholder="Id" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="City" class="col-sm-2 col-form-label">Address City</label>
+            <div class="col-sm-6">
+              <input type="text" [(ngModel)]="saloon.addresscity" class="form-control" name="City"
+                placeholder="City" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="State" class="col-sm-2 col-form-label">Address State</label>
+            <div class="col-sm-6">
+              <input type="text" [(ngModel)]="saloon.addressstate" class="form-control" name="State"
+                placeholder="State" required>
+            </div>
+          </div>
+          
+          <div class="form-group row">
+            <label for="Postalcode" class="col-sm-2 col-form-label">Address Postalcode</label>
+            <div class="col-sm-6">
+              <input type="text" [(ngModel)]="saloon.addresspostalcode" class="form-control" name="Postalcode"
+                placeholder="Postalcode" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-4 offset-sm-8">
+              <button type="button" class="btn btn-primary" (click)="markSaloonDetails()">Next</button>
+            </div>
+          </div>
+        </form>
+      </div>
+  
+      <!-- <div class="saloon" *ngIf="isSaloonDetails && isSaloonDetails== true"> -->
+            <div class="saloon" *ngIf="isSaloonDetails == true">
+        <form>
+          <div class="form-group row">
+            <div class="form-group col-sm-4">
+              <label for="CustomerId" class="col-form-label">Customer Id</label>
+              <input type="text" class="form-control" [(ngModel)]="customer.id" name="customerid" placeholder="Customer Id" required>
+            </div>
+        </div>
+            <div class="form-group col-sm-4">
+              <label for="CustomerName" class="col-form-label">Customer Name</label>
+              <input type="text" class="form-control" [(ngModel)]="customer.name" name="customername" placeholder="Name" required>
+            </div>
+        
+        <div class="form-group col-sm-4">
+                <label for="CustomerEmail" class="col-form-label">Customer Email</label>
+                <input type="text" class="form-control" [(ngModel)]="customer.email" name="customername" placeholder="Email" required>
+              </div>
+          
+          <div class="form-group col-sm-4">
+                <label for="CustomermobileNumber" class="col-form-label">Customer mobileNumber</label>
+                <input type="text" class="form-control" [(ngModel)]="customer.mobileNumber" name="customermobilenumber" placeholder="mobileNumber" required>
+              </div>
+          
+            <div class="col-sm-2 submitVendor">
+              <button type="button" class="btn btn-primary" (click)="addCustomer()">Add Customer</button>
+            </div>
+            <div class="submitSaloon">
+              <button type="button" class="btn btn-success" (click)="submitSaloon()">Submit</button>
+            </div>
+          
+        </form>
+        <hr>
+        <div>
+          <h1><u><em>Customers Added </em></u></h1>
+          <br>
+          <div class="row">
+            <div class="col-sm-1">
+              <h2> ID</h2>
+            </div>
+           
+            <div class="col-sm-1">
+              <h2> NAME </h2>
+            </div>
+            <div class="row">
+                    <div class="col-sm-1">
+                      <h2> EMAIL</h2>
+                    </div>
+            <div class="row">
+            <div class="col-sm-1">
+              <h2> MOBILENUMBER</h2>
+            </div>
+          </div>
+          <div class="addedCustomers">
+            <div class="row" *ngFor="let customer of customers">
+              <div class="col-sm-2">
+                {{ customer.id }}
+              </div>
+              <div class="col-sm-2">
+                {{ customer.name}}s
+              </div>
+              <div class="col-sm-2">
+                    {{ customer.email }}
+                  </div>
+                  <div class="col-sm-2">
+                        {{ customer.mobileNumber }}
+                      </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+        

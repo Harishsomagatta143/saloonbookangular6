@@ -1,0 +1,26 @@
+.otherRow{
+    height: 40vh;
+    padding: 20px;
+    margin-bottom: 5%;
+    .saloonWrap {
+      float: left;
+      padding-left:5%;
+    }
+    .saloonWrap::after{
+      content: "";
+      background-color: #000;
+      position: absolute;
+      width: 2px;
+      height: 30vh;
+      left: 20%;
+      display: block;
+      top: 90px;
+    }
+    
+}
+
+.addSaloon{
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+}
